@@ -223,20 +223,18 @@ Este SDK maneja automáticamente:
 pip install git+https://github.com/Root1V/llm-arch-sdk.git
 ```
 
-**Uso básico:**
-```python
-from llm_arch_sdk import LLMClient
+**📖 Ejemplo de Uso:**
 
-# El SDK maneja toda la autenticación automáticamente
-client = LLMClient(
-    base_url="https://your-nginx-gateway.com",
-    username="AGNRXYZ456",
-    password="your-password"
-)
+Para ver ejemplos completos de integración y uso del SDK, consulta el proyecto de ejemplo:
 
-# Realiza requests sin preocuparte por tokens
-response = client.chat("¿Cómo estás?")
-```
+👉 **[LLM SDK Client - Proyecto de Ejemplo](https://github.com/Root1V/llm-sdk-client.git)**
+
+Este repositorio contiene ejemplos prácticos de:
+- Configuración del cliente con el SDK
+- Autenticación y gestión de tokens
+- Diferentes patrones de uso (agentes, usuarios, monitoring)
+- Manejo de errores y reintentos
+- Integración en aplicaciones reales
 
 El SDK abstrae toda la complejidad del flujo de autenticación, gestión de tokens y comunicación con el gateway, permitiendo a los desarrolladores enfocarse en la lógica de su aplicación.
 
@@ -273,10 +271,10 @@ uv sync
 Crear archivo `.env` con las credenciales de usuarios:
 
 ```bash
-# Formato: USERNAME_PASSWORD
-USRS123ABC_PASSWORD=password123
-AGNRXYZ456_PASSWORD=agentpass456
-MNTR789DEF_PASSWORD=monitorpass789
+# Formato: USERNAME=PASSWORD
+USRS123ABC=password123
+AGNRXYZ456=agentpass456
+MNTR789DEF=monitorpass789
 ```
 
 ### 3. Ejecutar el servidor
@@ -358,8 +356,6 @@ Validación de token para NGINX/Proxy
 ### Variables de entorno (`.env`)
 
 ```bash
-# Credenciales de usuarios
-USERNAME_PASSWORD=secure_password
 
 # Configuración JWT (opcional en settings.env)
 SECRET_KEY=your-secret-key
@@ -470,8 +466,25 @@ location = /auth-validate {
 
 ## 📄 Licencia
 
-[Especificar licencia]
+**Licencia de Libre Uso (Free License)**
+
+Este proyecto está disponible bajo una licencia de libre uso. Puedes:
+- ✅ Usar el software libremente para cualquier propósito
+- ✅ Modificar el código fuente según tus necesidades
+- ✅ Distribuir copias del software
+- ✅ Usar en proyectos comerciales y no comerciales
+
+No se proporciona ninguna garantía. El software se distribuye "tal cual", sin garantías de ningún tipo.
 
 ## 👨‍💻 Autor
 
-[Tu nombre/organización]
+**Emerice Espiritu Santiago**
+
+- GitHub: [@Root1V](https://github.com/Root1V)
+- Proyecto: [llm-security](https://github.com/Root1V/llm-security)
+
+---
+
+**Proyectos Relacionados:**
+- [LLM Architecture SDK](https://github.com/Root1V/llm-arch-sdk) - SDK oficial para clientes
+- [LLM SDK Client](https://github.com/Root1V/llm-sdk-client) - Ejemplos de uso del SDK
