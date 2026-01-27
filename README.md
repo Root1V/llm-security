@@ -259,7 +259,7 @@ El SDK abstrae toda la complejidad del flujo de autenticación, gestión de toke
 
 ```bash
 # Clonar el repositorio
-git clone <repo-url>
+git clone https://github.com/Root1V/llm-security.git
 cd llm_security
 
 # Instalar dependencias con uv
@@ -279,19 +279,8 @@ MNTR789DEF=monitorpass789
 
 ### 3. Ejecutar el servidor
 
-**Opción 1: Usando uv (recomendado)** ⚡
 ```bash
 uv run dev
-```
-
-**Opción 2: Script directo**
-```bash
-./dev
-```
-
-**Opción 3: Make**
-```bash
-make dev
 ```
 
 El servidor estará disponible en: `http://0.0.0.0:9000`
@@ -430,11 +419,9 @@ llm_security/
 ```bash
 # Desarrollo
 uv run dev              # Servidor con auto-reload
-make dev                # Alternativa con Make
 
 # Producción
 uv run start            # Servidor sin auto-reload
-make start              # Alternativa con Make
 
 # Gestión
 uv sync                 # Sincronizar dependencias
