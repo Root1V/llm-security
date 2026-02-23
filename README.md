@@ -5,6 +5,11 @@
 Este módulo actúa como gateway de seguridad que valida y autoriza las aplicaciones antes de permitirles consumir modelos LLM locales. Proporciona autenticación basada en roles, gestión de tokens JWT con TTL diferenciado y validación mediante endpoints para integración con proxies inversos como NGINX.
 
 ---
+### Ejecutar el API de Seguridad
+
+```bash
+uv run dev
+```
 
 ## 🎯 Objetivo
 
